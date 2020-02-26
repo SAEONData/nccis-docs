@@ -1,6 +1,6 @@
 ---
 id: doc2
-title: Customise the app
+title: customize your instance
 ---
 
 ## Customising your instance

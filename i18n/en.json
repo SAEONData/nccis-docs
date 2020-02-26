@@ -4,28 +4,7 @@
     "next": "Next",
     "previous": "Previous",
     "tagline": "Home of the official docs for the CCIS",
-    "docs": {
-      "api": {
-        "title": "API"
-      },
-      "dependencies": {
-        "title": "Dependencies"
-      },
-      "doc1": {
-        "title": "Start here",
-        "sidebar_label": "start"
-      },
-      "doc2": {
-        "title": "Customise the app"
-      },
-      "doc3": {
-        "title": "Branding",
-        "sidebar_label": "branding"
-      },
-      "doc4": {
-        "title": "Credentials"
-      }
-    },
+    "docs": {},
     "links": {
       "Docs": "Docs",
       "API": "API",
