@@ -52,9 +52,11 @@ SSMS 18.4</p>
 <li>Add your .bak file from where you saved it earlier</li>
 </ol>
 <p><img src="assets\db-step4.gif" alt=""></p>
-<p>Click OK</p>
+<ol start="5">
+<li>Click OK</li>
+</ol>
 <p>To test whether the DB creation was successful, check that there is data in the DB folder (ie by running a query)</p>
-<p>Setting up the API</p>
+<h3><a class="anchor" aria-hidden="true" id="setting-up-the-api"></a><a href="#setting-up-the-api" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setting up the API</h3>
 <p>Create a folder inetpub on the drive on your server where you want to store your API files</p>
 <p>In inetpub, create another folder called wwwroot, and in there, a folder for each app, respectively:</p>
 <p>NCCRD, NDAO, VMS, MAP</p>
@@ -73,23 +75,53 @@ SSMS 18.4</p>
 <p>C:/inetpub/wwwroot/map/</p>
 <p><a href="https://drive.google.com/drive/folders/18m0PLH1yjSpC7ubGrkNpcTqQlzBInBNA?usp=sharing">https://drive.google.com/drive/folders/18m0PLH1yjSpC7ubGrkNpcTqQlzBInBNA?usp=sharing</a></p>
 <p>Locate the secrets.json file in NDAO and NCCRD and edit it according to your setup, with your connection strings</p>
-<p>Setting up the Clients</p>
-<p>Copy the following folder into the location you created for NCCIS, so that you have the path:</p>
+<h3><a class="anchor" aria-hidden="true" id="setting-up-the-clients"></a><a href="#setting-up-the-clients" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setting up the Clients</h3>
+<ol>
+<li>Copy the following folder into the location you created for NCCIS, so that you have the path:</li>
+</ol>
 <p>C:/inetpub/wwwroot/nccis/</p>
 <p><a href="https://drive.google.com/drive/folders/1gwZXgcS581aq9p35xfuw9S1nI4ymyaM9?usp=sharing">https://drive.google.com/drive/folders/1gwZXgcS581aq9p35xfuw9S1nI4ymyaM9?usp=sharing</a></p>
-<p>Copy the following folder into the location you created for NCCRD, so that you have the path:</p>
+<ol start="2">
+<li>Copy the following folder into the location you created for NCCRD, so that you have the path:</li>
+</ol>
 <p>C:/inetpub/wwwroot/nccrd/client</p>
 <p><a href="https://drive.google.com/drive/folders/1Z5jaUJd4_lM1WGlfdLMOkfSHAdXh-pJy?usp=sharing">https://drive.google.com/drive/folders/1Z5jaUJd4_lM1WGlfdLMOkfSHAdXh-pJy?usp=sharing</a></p>
-<p>Copy the following folder into the location you created for NDAO, so that you have the path:</p>
+<ol start="3">
+<li>Copy the following folder into the location you created for NDAO, so that you have the path:</li>
+</ol>
 <p>C:/inetpub/wwwroot/ndao/client</p>
 <p><a href="https://drive.google.com/drive/folders/1DdFcdXSCQynmEaRdGqmTa0u-DBoB16xh?usp=sharing">https://drive.google.com/drive/folders/1DdFcdXSCQynmEaRdGqmTa0u-DBoB16xh?usp=sharing</a></p>
-<p>Configure IIS</p>
-<p>Open Internet Information Services Manager (IIS)</p>
-<p>Locate the Connections pane and expand your server instance by clicking on the dropdown arrow to the left.</p>
-<p>Expand Sites and if there is a site called ‘default’, go ahead and delete it, then, rightclick on Sites and select Add Website (this will open the Add Website wizard)</p>
-<p>Under Site name: enter the name of your web app, for this walkthrough we’ll use NCCIS, this will be the entry-point application, the rest of the sites will be sub-apps of this main app.</p>
-<p>Under Application Pool, make sure DefaultAppPool is selected</p>
-<p>In the Content Directory section set your Physical path to where your compiled files are stored, in this case it is the folder you created in the previous step: C:\inetpub\wwwroot\NCCIS\Client</p>
-<p>Click on Connect as… and select Application User</p>
-<p>Make sure that Start Website immediately is checked and click OK to complete the process.</p>
-</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#server">Server</a><ul class="toc-headings"><li><a href="#enable-internet-information-services-iis">Enable Internet Information Services (IIS)</a></li></ul></li><li><a href="#database-db">Database (DB)</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 SAEON</section></footer></div></body></html>
+<h3><a class="anchor" aria-hidden="true" id="configure-iis"></a><a href="#configure-iis" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configure IIS</h3>
+<ol>
+<li>Open Internet Information Services Manager (IIS)</li>
+</ol>
+<p><img src="assets\iis-step1.gif" alt=""></p>
+<ol start="2">
+<li>Locate the Connections pane and expand your server instance by clicking on the dropdown arrow to the left.</li>
+</ol>
+<p><img src="assets\iis-step2.gif" alt=""></p>
+<ol start="3">
+<li>Expand Sites and if there is a site called ‘default’, go ahead and delete it, then, rightclick on Sites and select Add Website (this will open the Add Website wizard)</li>
+</ol>
+<p><img src="assets\iis-step3.gif" alt=""></p>
+<ol start="4">
+<li>Under Site name: enter the name of your web app, for this walkthrough we’ll use NCCIS, this will be the entry-point application, the rest of the sites will be sub-apps of this main app.</li>
+</ol>
+<p><img src="assets\iis-step4.gif" alt=""></p>
+<ol start="5">
+<li>Under Application Pool, make sure DefaultAppPool is selected</li>
+</ol>
+<p><img src="assets\iis-step5.gif" alt=""></p>
+<ol start="6">
+<li>In the Content Directory section set your Physical path to where your compiled files are stored, in this case it is the folder you created in the previous step: C:\inetpub\wwwroot\NCCIS\Client</li>
+</ol>
+<p><img src="assets\iis-step6.gif" alt=""></p>
+<ol start="7">
+<li>Click on Connect as… and select Application User</li>
+</ol>
+<p><img src="assets\iis-step7.gif" alt=""></p>
+<ol start="8">
+<li>Make sure that Start Website immediately is checked and click OK to complete the process.</li>
+</ol>
+<p><img src="assets\iis-step8.gif" alt=""></p>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#server">Server</a><ul class="toc-headings"><li><a href="#enable-internet-information-services-iis">Enable Internet Information Services (IIS)</a></li></ul></li><li><a href="#database-db">Database (DB)</a><ul class="toc-headings"><li><a href="#setting-up-the-api">Setting up the API</a></li><li><a href="#setting-up-the-clients">Setting up the Clients</a></li><li><a href="#configure-iis">Configure IIS</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 SAEON</section></footer></div></body></html>
