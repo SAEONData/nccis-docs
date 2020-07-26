@@ -1,9 +1,5 @@
 {
   "docs": {
-    "Setup": ["setup"],
-    "First Category": ["doc2", "doc3"]
-  },
-  "docs-other": {
-    "First Category": ["doc4", "doc5"]
+    "Setup": ["setup"]
   }
 }
