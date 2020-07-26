@@ -1,58 +1,95 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Credentials · The National Climate Change Information System Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="//TODO figure out how we&#x27;re going to distribute access"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Credentials · The National Climate Change Information System Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://saeondata.github.io/nccis-docs/"/><meta property="og:description" content="//TODO figure out how we&#x27;re going to distribute access"/><meta property="og:image" content="https://saeondata.github.io/nccis-docs/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://saeondata.github.io/nccis-docs/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/nccis-docs/img/logo_dea.jpg"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/vs2015.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/nccis-docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/nccis-docs/css/main.css"/><script src="/nccis-docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/nccis-docs/"><img class="logo" src="/nccis-docs/img/logo_dea.jpg" alt="The National Climate Change Information System Documentation"/><h2 class="headerTitleWithLogo">The National Climate Change Information System Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/nccis-docs/docs/doc1" target="_self">Docs</a></li><li class=""><a href="/nccis-docs/docs/api" target="_self">API</a></li><li class=""><a href="/nccis-docs/docs/dependencies" target="_self">Dependencies</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>First Category</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">First Category</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/nccis-docs/docs/doc4">Credentials</a></li></ul></div></div></section></div><script>
-            var coll = document.getElementsByClassName('collapsible');
-            var checkActiveCategory = true;
-            for (var i = 0; i < coll.length; i++) {
-              var links = coll[i].nextElementSibling.getElementsByTagName('*');
-              if (checkActiveCategory){
-                for (var j = 0; j < links.length; j++) {
-                  if (links[j].classList.contains('navListItemActive')){
-                    coll[i].nextElementSibling.classList.toggle('hide');
-                    coll[i].childNodes[1].classList.toggle('rotate');
-                    checkActiveCategory = false;
-                    break;
-                  }
-                }
-              }
-
-              coll[i].addEventListener('click', function() {
-                var arrow = this.childNodes[1];
-                arrow.classList.toggle('rotate');
-                var content = this.nextElementSibling;
-                content.classList.toggle('hide');
-              });
-            }
-
-            document.addEventListener('DOMContentLoaded', function() {
-              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
-              createToggler('#tocToggler', 'body', 'tocActive');
-
-              var headings = document.querySelector('.toc-headings');
-              headings && headings.addEventListener('click', function(event) {
-                var el = event.target;
-                while(el !== headings){
-                  if (el.tagName === 'A') {
-                    document.body.classList.remove('tocActive');
-                    break;
-                  } else{
-                    el = el.parentNode;
-                  }
-                }
-              }, false);
-
-              function createToggler(togglerSelector, targetSelector, className) {
-                var toggler = document.querySelector(togglerSelector);
-                var target = document.querySelector(targetSelector);
-
-                if (!toggler) {
-                  return;
-                }
-
-                toggler.onclick = function(event) {
-                  event.preventDefault();
-
-                  target.classList.toggle(className);
-                };
-              }
-            });
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Credentials</h1></header><article><div><span><p>//TODO figure out how we're going to distribute access</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/nccis-docs/docs/doc5"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 SAEON</section></footer></div></body></html>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Migration · The National Climate Change Information System Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Server"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Migration · The National Climate Change Information System Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://saeondata.github.io/nccis-docs/"/><meta property="og:description" content="## Server"/><meta property="og:image" content="https://saeondata.github.io/nccis-docs/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://saeondata.github.io/nccis-docs/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/nccis-docs/img/logo_dea.jpg"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/vs2015.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/nccis-docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/nccis-docs/css/main.css"/><script src="/nccis-docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/nccis-docs/"><img class="logo" src="/nccis-docs/img/logo_dea.jpg" alt="The National Climate Change Information System Documentation"/><h2 class="headerTitleWithLogo">The National Climate Change Information System Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/nccis-docs/docs/doc1" target="_self">Docs</a></li><li class=""><a href="/nccis-docs/docs/api" target="_self">API</a></li><li class=""><a href="/nccis-docs/docs/dependencies" target="_self">Dependencies</a></li><li class="siteNavItemActive"><a href="/nccis-docs/docs/doc4" target="_self">Migration</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Migration</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="server"></a><a href="#server" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Server</h2>
+<p>First we’re going to set up our server and environment.</p>
+<p>Allocate a Windows server with the following specifications:</p>
+<p>Windows Server 2016
+Processor: Intel(R) Xeon(R) CPU E5-2630 v2 @ 2.60GHz (4 processors)
+Installed memory (RAM): 16.00GB minimum, more preferred
+System type: 64-bit Operating System, x64-based processor
+Disk Storage: 500GB will be adequate, 1TB preferred</p>
+<p>Download and install:</p>
+<p>.Net Core Hosting Bundle v2.2.x
+SQL Server Express 2017
+ISS v7
+SSMS 18.4</p>
+<h3><a class="anchor" aria-hidden="true" id="enable-internet-information-services-iis"></a><a href="#enable-internet-information-services-iis" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enable Internet Information Services (IIS)</h3>
+<ol>
+<li>In the Server Manager, navigate to Add Roles and Features (this will launch the Add Roles and Features wizard)</li>
+</ol>
+<p><img src="/nccis-docs/docs/assets/server-step1.gif" alt=""></p>
+<ol start="2">
+<li>In the menu pane, select Server Roles and ensure that Web Server (IIS) and all its dropdowns except FTP Server, are selected</li>
+</ol>
+<p><img src="assets\server-step2.gif" alt=""></p>
+<ol start="3">
+<li>In the menu pane, select Features and ensure that the following is selected:</li>
+</ol>
+<ul>
+<li>ISS Hostable Webcore</li>
+<li>.Net Framework and all its dropdowns</li>
+</ul>
+<p><img src="assets\server-step3.gif" alt=""></p>
+<ol start="4">
+<li>Click Install</li>
+</ol>
+<p>When prompted to do so, restart the server.</p>
+<h2><a class="anchor" aria-hidden="true" id="database-db"></a><a href="#database-db" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Database (DB)</h2>
+<p>Now we’re going to create our databases.</p>
+<p>Download the .bak file for the NCCRD database from the folder in Google Drive, save that file somewhere on your server where you can easily locate it, we’ll need it in a bit:</p>
+<p><a href="https://drive.google.com/file/d/1WyUthzIuifApbujmTGiiASpTwRVkVlLS/view?usp=sharing">https://drive.google.com/file/d/1WyUthzIuifApbujmTGiiASpTwRVkVlLS/view?usp=sharing</a></p>
+<ol>
+<li>On the server: open Microsoft SQL Server Management Studio (if you haven’t yet, go ahead and install it now: <a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15#download-ssms">SSMS 18.4</a>).</li>
+</ol>
+<p><img src="assets\db-step1.gif" alt=""></p>
+<ol start="2">
+<li>Locate the Object Explorer Pane, rightclick on Databases and select Restore Database…</li>
+</ol>
+<p><img src="assets\db-step2.gif" alt=""></p>
+<ol start="3">
+<li>Under Source, select Device</li>
+</ol>
+<p><img src="assets\db-step3.gif" alt=""></p>
+<ol start="4">
+<li>Add your .bak file from where you saved it earlier</li>
+</ol>
+<p><img src="assets\db-step4.gif" alt=""></p>
+<p>Click OK</p>
+<p>To test whether the DB creation was successful, check that there is data in the DB folder (ie by running a query)</p>
+<p>Setting up the API</p>
+<p>Create a folder inetpub on the drive on your server where you want to store your API files</p>
+<p>In inetpub, create another folder called wwwroot, and in there, a folder for each app, respectively:</p>
+<p>NCCRD, NDAO, VMS, MAP</p>
+<p>So that you have the path: C:/inetpub/wwwroot/<app name>, for each app.</p>
+<p>For the purpose of this walkthrough we’re using NCCRD as an example, the following steps need to be carried out for NDAO, CSA, MAP and VMS as well.</p>
+<p>Copy the following folder into the location you created for NCCRD, so that you have the path:</p>
+<p>C:/inetpub/wwwroot/nccrd/api</p>
+<p><a href="https://drive.google.com/drive/folders/120klkLZglAvr3phFKhIdoUT2HjPpldU0?usp=sharing">https://drive.google.com/drive/folders/120klkLZglAvr3phFKhIdoUT2HjPpldU0?usp=sharing</a></p>
+<p>Copy the following folder into the location you created for NDAO, so that you have the path:</p>
+<p>C:/inetpub/wwwroot/ndao/api</p>
+<p><a href="https://drive.google.com/drive/folders/1DaeYGR_d4Ij8wNPjcabNhs0tKXcRGU1U?usp=sharing">https://drive.google.com/drive/folders/1DaeYGR_d4Ij8wNPjcabNhs0tKXcRGU1U?usp=sharing</a></p>
+<p>Copy the following folder into the location you created for VMS, so that you have the path:</p>
+<p>C:/inetpub/wwwroot/vms/api</p>
+<p><a href="https://drive.google.com/drive/folders/1sUdZr2gPomXRep-o7HCEN1Zd67IkIMQM?usp=sharing">https://drive.google.com/drive/folders/1sUdZr2gPomXRep-o7HCEN1Zd67IkIMQM?usp=sharing</a></p>
+<p>Copy the following folder into the location you created for MAP, so that you have the path:</p>
+<p>C:/inetpub/wwwroot/map/</p>
+<p><a href="https://drive.google.com/drive/folders/18m0PLH1yjSpC7ubGrkNpcTqQlzBInBNA?usp=sharing">https://drive.google.com/drive/folders/18m0PLH1yjSpC7ubGrkNpcTqQlzBInBNA?usp=sharing</a></p>
+<p>Locate the secrets.json file in NDAO and NCCRD and edit it according to your setup, with your connection strings</p>
+<p>Setting up the Clients</p>
+<p>Copy the following folder into the location you created for NCCIS, so that you have the path:</p>
+<p>C:/inetpub/wwwroot/nccis/</p>
+<p><a href="https://drive.google.com/drive/folders/1gwZXgcS581aq9p35xfuw9S1nI4ymyaM9?usp=sharing">https://drive.google.com/drive/folders/1gwZXgcS581aq9p35xfuw9S1nI4ymyaM9?usp=sharing</a></p>
+<p>Copy the following folder into the location you created for NCCRD, so that you have the path:</p>
+<p>C:/inetpub/wwwroot/nccrd/client</p>
+<p><a href="https://drive.google.com/drive/folders/1Z5jaUJd4_lM1WGlfdLMOkfSHAdXh-pJy?usp=sharing">https://drive.google.com/drive/folders/1Z5jaUJd4_lM1WGlfdLMOkfSHAdXh-pJy?usp=sharing</a></p>
+<p>Copy the following folder into the location you created for NDAO, so that you have the path:</p>
+<p>C:/inetpub/wwwroot/ndao/client</p>
+<p><a href="https://drive.google.com/drive/folders/1DdFcdXSCQynmEaRdGqmTa0u-DBoB16xh?usp=sharing">https://drive.google.com/drive/folders/1DdFcdXSCQynmEaRdGqmTa0u-DBoB16xh?usp=sharing</a></p>
+<p>Configure IIS</p>
+<p>Open Internet Information Services Manager (IIS)</p>
+<p>Locate the Connections pane and expand your server instance by clicking on the dropdown arrow to the left.</p>
+<p>Expand Sites and if there is a site called ‘default’, go ahead and delete it, then, rightclick on Sites and select Add Website (this will open the Add Website wizard)</p>
+<p>Under Site name: enter the name of your web app, for this walkthrough we’ll use NCCIS, this will be the entry-point application, the rest of the sites will be sub-apps of this main app.</p>
+<p>Under Application Pool, make sure DefaultAppPool is selected</p>
+<p>In the Content Directory section set your Physical path to where your compiled files are stored, in this case it is the folder you created in the previous step: C:\inetpub\wwwroot\NCCIS\Client</p>
+<p>Click on Connect as… and select Application User</p>
+<p>Make sure that Start Website immediately is checked and click OK to complete the process.</p>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#server">Server</a><ul class="toc-headings"><li><a href="#enable-internet-information-services-iis">Enable Internet Information Services (IIS)</a></li></ul></li><li><a href="#database-db">Database (DB)</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 SAEON</section></footer></div></body></html>
